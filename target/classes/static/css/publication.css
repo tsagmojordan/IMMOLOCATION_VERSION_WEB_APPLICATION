@@ -1,0 +1,45 @@
+.infoPropriete{
+
+}
+.infoBailleur{
+
+}
+.publication{
+
+
+
+
+}
+
+.image{
+
+
+}
+.description{
+
+}
+.localisation{
+
+}
+article{
+    background: #191c1f;
+    width: 450px;
+    height: 650px;
+    margin: auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+.prix{
+
+    font-family: "Droid Sans Mono Dotted";
+    color: lightyellow;
+}
+.detail{
+
+}
+input{
+    width: 120px;
+    height: 30px;
+}

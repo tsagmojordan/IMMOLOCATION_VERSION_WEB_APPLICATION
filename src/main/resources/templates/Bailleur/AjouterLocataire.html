@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width-device-width, initial-scale=1"/>
+    <title>
+        Tableau de bord
+    </title><link rel="shortcut icon" href="../../static/images/logo.png" th:src="@{/images/logo.png}"/>
+    <link rel="stylesheet" href="../../static/css/MEF.css" th:href="@{css/MEF.css}"/>
+    <link rel="stylesheet" href="../../static/bootstrap-5.1.3-dist/css/bootstrap.css" th:href="@{/bootstrap-5.1.3-dist/css/bootstrap.css}"/>
+    <link rel="stylesheet" href="../../static/bootstrap-5.1.3-dist/css/bootstrap.min.css" th:href="@{/bootstrap-5.1.3-dist/css/bootstrap.min.css}"/>
+    <script src="../../static/bootstrap-5.1.3-dist/js/bootstrap.js" th:src="@{/bootstrap-5.1.3-dist/js/bootstrap.js}"></script>
+    <script src="../../static/bootstrap-5.1.3-dist/js/bootstrap.min.js" th:src="@{/bootstrap-5.1.3-dist/js/bootstrap.min.js}"></script>
+
+</head>
+<body style="background-image: url(../images/fond.jpg);background-size: cover;")>
+<div class="container-fluid">
+    <div class="row">
+        <!--side bar-->
+        <div id="block1" class="col-sm-2" style="color:#fff">
+            <br/>
+            <div class="bg-light border mt-2 text-white bg-dark p-2 rounded-top rounded-bottom">
+                <div>
+                    <nav>
+                        <ul class="nav nav-tabs">
+                            <ul class="nav flex-column flex-xs-row">
+                                <h3>Salut Mr<br></h3>
+                                <h3 style="text-align:center" th:text="${bailleur.nom_bailleur}"></h3>
+                            </ul>
+                        </ul>
+                    </nav>
+                    <br/>
+                    <nav><h4 style="color:#adb4da">Gérer les propriétés:</h4>
+                        <ul class="nav nav-tabs">
+                            <ul class="nav flex-column flex-xs-row">
+                                <li class="nav-item">
+                                    <a class="nav-link" th:href="@{/AjouterPropriete}">
+                                        <span class="text-white">Ajouter Propriété(s)</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link"  th:href="@{/GestionProprietes} ">
+                                        <span class="text-white">Consulter Propriété(s)</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" th:href="@{/proprieteLibre}">
+                                        <span class="text-white">Propriété(s) non occupée</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </ul>
+                    </nav>
+                    <br/>
+                    <nav><h4 style="color:#adb4da">Gérer les locataires:</h4>
+                        <ul class="nav nav-tabs">
+                            <ul class="nav flex-column flex-xs-row">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../Bailleur/AjouterLocataire.html" th:href="@{/AjouterLocataire}">
+                                        <span class="text-white">Ajouter Locataire(s)</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="SupprimerLocataire.html" th:href="@{/GestionLocataire}">
+                                        <span class="text-white">consulter Locataire(s)</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="ModifierLocataire.html" th:href="@{/LocataireAere}" >
+                                        <span class="text-white">Locataire(s) avec aeré(s)</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="EcrireLocataire.html" th:href="@{/messagerieBailleur}">
+                                        <span class="text-white">Erire à un Locataire</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../Bailleur/Facturer.html" th:href="@{/factureBailleur}">
+                                        <span class="text-white">Facturer un Locataire</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </ul>
+                    </nav>
+                    <br/>
+                    <nav><h4 style="color:#adb4da">Récapitulatif:</h4>
+                        <ul class="nav nav-tabs">
+                            <ul class="nav flex-column flex-xs-row">
+                                <li class="nav-item" style="background-color:#adb4da">
+                                    <a class="nav-link" href="TableauDeBord.html">
+                                        <span style="color:#000">Tableau de bords</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <br/>
+        </div>
+        <div id="bailBack" class="col-sm-10">
+            <header class="container-fluid; site-header sticky-top py-5">
+                <div class="container-fluid bg-light border mt-0 text-white bg-dark p-0 rounded-top rounded-bottom" style="font-size:25px">
+                    <nav id="navAccueilS.html" class="d-flex justify-content-center py-3">
+                        <a class="py-2" href="../Accueil.html" th:href="@{/home}" title="Accueil" style="text-decoration:none">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fff" class="bi bi-house-door" viewBox="0 0 16 16">
+                                <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a class="py-2" href="../Propriete/Proprietes.html" title="Propriétés" style="text-decoration:none; margin-left:50px">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fff" class="bi bi-building" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694 1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z"></path>
+                                <path d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z"></path>
+                            </svg>
+                        </a>
+                        <a class="py-2" href="../Bailleur/AuthentificationBailleur.html" th:href="@{/Bailleur/AuthentificationBailleur}" title="Bailleur" style="text-decoration:none; margin-left:50px">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fff" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                                <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"></path>
+                            </svg>
+                        </a>
+                        <a class="py-2" href="../Locataire/AuthentificationLocataire.html" th:href="@{/locataire}" title="Locataire" style="text-decoration:none; margin-left:50px">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fff" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
+                            </svg>
+                        </a>
+                        <a class="py-2" href="../Commentaire.html" title="Commentaires" style="text-decoration:none; margin-left:50px">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fff" class="bi bi-plus" viewBox="0 0 16 16">
+                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path>
+                            </svg>
+                        </a>
+                    </nav>
+                </div>
+            </header>
+                    <form th:action="@{/SaveLocataire}" method="post" th:object="${locataire}">
+                        <h2 style="font-family:cambria;color:#000; text-align: center"> Ajouter un locataire</h2>
+                            <div class="form-group">
+                                <label for="nom" style="color: #000">Nom:</label>
+                                <input type="text" id="nom" name="nom_Locataire"  th:text="${locataire.getNom_Locataire()}" class="form-control" placeholder="Entrez le nom du nouveau locataire">
+                            </div>
+                            <div class="form-group">
+                                <label for="cni" style="color: #000">Numero cni:</label>
+                                <input type="text" id="cni" name="Numero_cni" class="form-control" th:text="${locataire.getNumero_cni()}" placeholder="Entrez le numéro de cni du nouveau locataire">
+                            </div>
+                            <div class="form-group">
+                                <label for="profession" style="color: #000">Proffession:</label>
+                                <input type="text" id="profession" name="profession" th:text="${locataire.getProfession()}" class="form-control" placeholder="Entrez la proffession du nouveau locataire">
+                            </div>
+                            <div class="form-group">
+                                <label for="nom" style="color: #000" >Telephone:</label>
+                                <input type="text" id="telephone" name="contact" class="form-control" th:text="${locataire.getContact()}"  placeholder="Entrez le numéro de téléphone du nouveau locataire">
+                            </div>
+                            <div class="form-group">
+                                <label for="propriete" style="color: #000">selectionnez la propriete</label>
+                                <select name="name" id="propriete" >
+                                    <option  th:each="p:${proprieteList}" th:text="${p.name}"></option>
+                                </select><br/>
+                            </div>
+                            <div class="form-group">
+                                <label for="montant" style="color: #000">Montant mensuel à payer:</label>
+                                <input type="text" id="montant" name="montant_mensuel_a_payer" th:text="${locataire.getMontant_mensuel_a_payer()}" class="form-control" placeholder="Entrez le montant que le locataire doit payer chaque mois"><br/>
+                            </div>
+                            <div  style="font-family:cambria;color:#000; text-align: center">
+                                <input type="submit" value="ajouter" class="btn btn-lg" style="background-color:#000; color:#fff">
+                                <input type="reset" value="annuler" class="btn btn-lg" style="background-color:#000; color:#fff">
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

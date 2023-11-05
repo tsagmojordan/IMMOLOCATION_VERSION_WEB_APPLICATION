@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width-device-width, initial-scale=1"/>
+        <title>
+            Facture
+        </title>
+        <link rel="stylesheet" href="../../static/css/MEF.css" th:href="@{css/MEF.css}"/>
+
+        <link rel="stylesheet" href="../../static/bootstrap-5.1.3-dist/css/bootstrap.css" th:href="@{/bootstrap-5.1.3-dist/css/bootstrap.css}"/>
+        <link rel="stylesheet" href="../../static/bootstrap-5.1.3-dist/css/bootstrap.min.css" th:href="@{/bootstrap-5.1.3-dist/css/bootstrap.min.css}"/>
+        <script src="../../static/bootstrap-5.1.3-dist/js/bootstrap.js" th:src="@{/bootstrap-5.1.3-dist/js/bootstrap.js}"></script>
+        <script src="../../static/bootstrap-5.1.3-dist/js/bootstrap.min.js" th:src="@{/bootstrap-5.1.3-dist/js/bootstrap.min.js}"></script>
+    </head>
+    <body style="background-image: url(../images/fond.jpg);background-size: cover;")>
+        <div class="container-fluid">
+            <div class="row">
+                <!--side bar-->
+                <div id="block1" class="col-sm-2" style="color:#fff">
+                    <br/>
+                    <div class="bg-light border mt-2 text-white bg-dark p-2 rounded-top rounded-bottom">
+                        <br>
+                        <div>
+                            <nav>
+                                <ul class="nav nav-tabs">
+                                    <ul class="nav flex-column flex-xs-row">
+                                        <h3 style="text-align:center">Bonjour <br>cher Locataire!!!</h3>
+                                    </ul>
+                                </ul>
+                            </nav>
+                            <br/><br/>
+                        </div>
+                        <div>
+                            <nav><h4 style="color:#adb4da">Echanger avec le bailleur:</h4>
+                                <ul class="nav nav-tabs">
+                                    <ul class="nav flex-column flex-xs-row">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="Messagerie.html" th:href="@{/messagerieLocataire}">
+                                                <span class="text-white">Messagerie</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </ul>
+                            </nav>
+                            <br/>
+                            <nav><h4 style="color:#adb4da">Informations sur sa propriété:</h4>
+                                <ul class="nav nav-tabs">
+                                    <ul class="nav flex-column flex-xs-row">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="DescriptionPro.html">
+                                                <span class="text-white">Description</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" style="background-color:#adb4da">
+                                            <a class="nav-link" href="Facture.html" th:href="@{/facture}">
+                                                <span style="color:#000">Facture</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="Contrat_de_bail.html">
+                                                <span class="text-white">Contrat de bail</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </ul>
+                            </nav>
+                            <br/>
+                            <nav><h4 style="color:#adb4da">Autres:</h4>
+                                <ul class="nav nav-tabs">
+                                    <ul class="nav flex-column flex-xs-row">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="DroitDomanier.html">
+                                                <span class="text-white">Droit domanier</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="DatePayement.html">
+                                                <span class="text-white">Date payement</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </ul>
+                            </nav>
+                            <br/>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div id="bailBack" class="col-sm-10">
+                    <br/>
+                    <header class="container-fluid; site-header sticky-top py-5">
+                        <div class="bg-light border mt-0 text-white bg-dark p-0 rounded-top rounded-bottom" style="font-size:25px">
+                            <nav id="navAccueilS.html" class="d-flex justify-content-center py-3">
+                                <a class="py-2" href="../Accueil.html" title="Accueil"  th:href="@{/home}"  style="text-decoration:none">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fff" class="bi bi-house-door" viewBox="0 0 16 16">
+                                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a class="py-2" href="../Propriete/Proprietes.html" title="Propriétés" style="text-decoration:none; margin-left:50px">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fff" class="bi bi-building" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694 1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z"></path>
+                                        <path d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z"></path>
+                                    </svg>
+                                </a>
+                                <a class="py-2" href="../Bailleur/AuthentificationBailleur.html" title="Bailleur" style="text-decoration:none; margin-left:50px">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fff" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                                        <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"></path>
+                                    </svg>
+                                </a>
+                                <a class="py-2" href="../Locataire/AuthentificationLocataire.html" title="Locataire" style="text-decoration:none; margin-left:50px">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fff" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
+                                    </svg>
+                                </a>
+                                <a class="py-2" href="../Commentaire.html" title="Commentaires" style="text-decoration:none; margin-left:50px">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fff" class="bi bi-plus" viewBox="0 0 16 16">
+                                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path>
+                                    </svg>
+                                </a>
+                            </nav>
+                        </div>
+                    </header>
+                    <div>
+                        <h1 style="font-family:cambria; text-align: center;">FACTURE</h1>
+                        <br/>
+                        <center><a class="btn btn-lg" href="../Commentaire.html" th:href="@{/telecahrgerFacture}" style="background-color:#000; color:#adb4da"> Telecharger votre dernier facture </a></center>
+                    </div>
+                        <p><p></p><h3 style="font-family:cambria"> Historique de vos factures</h3>
+                        <table class="table table-dark table-striped table-bordered table-hover">
+                            <thead class="thead-light" style="color:#fff">
+                                <tr>
+                                    <th>Numero de la facture</th>
+                                    <th>Montant mensuel à payer</th>
+                                    <th>Dernier montant enregistré</th>
+                                    <th>Dettes</th>
+                                    <th>Avance de votre dernier montant mensuel non complètement payé</th>
+                                    <th>Avance sur le prochain paiment Enregistrée</th>
+                                    <th>Date de facturation</th>
+                                    <th> Telecharger une facture</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr th:each="facture:${listeFacture}">
+                                    <td th:text="${facture.id_facture}" >  id</td>
+                                    <td th:text="${montantMensuel}" >montant_mensuel_a_payer</td>
+                                    <td th:text="${facture.dernier_montant_Enregistre}" > Dernier montant enregistré</td>
+                                    <td th:text="${facture.dette}" >Dettes</td>
+                                    <td th:text="${facture.avance}" >Dettes</td>
+                                    <td th:text="${facture.surplus}">Avance sur prochain paiment Enregistrée </td>
+                                    <td th:text="${facture.date_Facturation}">date facturation</td>
+                                    <td><a th:href="@{'/Facture/historique/'+${facture.id_facture} }">telecharger cette facture</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

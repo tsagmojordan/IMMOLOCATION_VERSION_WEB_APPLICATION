@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="../../static/css/formulaire.css" th:href="@{formulaire.css}"/>
+
+
+    <title>image</title>
+</head>
+<body><h1> formulaire photo</h1>
+
+
+    <form th:action="@{save}" method="post">
+
+    <label>photo</label>
+    <input type="file" name="image" th:name="image"/><br/>
+
+    <input type="submit" value="enregistrer"/><br/>
+    </form>
+</body>
+</html>

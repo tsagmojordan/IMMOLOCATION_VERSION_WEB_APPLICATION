@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width-device-width, initial-scale=1"/>
+		<title>
+			Accueil
+		</title>
+		<link rel="stylesheet" href="" th:href="@{/MEF.css}"/>
+		<link rel="stylesheet"  href="../bootstrap-5.1.3-dist/css/bootstrap.css" th:href="@{/bootstrap-5.1.3-dist/css/bootstrap.css}" />
+		<link rel="stylesheet"  href="../static/bootstrap-5.1.3-dist/css/bootstrap.min.css" th:href="@{/bootstrap-5.1.3-dist/css/bootstrap.min.css}"/>
+		<script src="../static/bootstrap-5.1.3-dist/js/bootstrap.js" th:src="@{/bootstrap-5.1.3-dist/js/bootstrap.js}"></script>
+		<script src="../static/bootstrap-5.1.3-dist/js/bootstrap.min.js" th:src="@{/bootstrap-5.1.3-dist/js/bootstrap.min.js}"></script>
+	</head>
+	<body>
+				<!--<img src="../../static/images/logo.png" th:src="@{/images/logo.png}"/>-->
+		<header class="container-fluid; site-header">
+			<div class="container-fluid" style="background-image:url(images/accueil.jpg); background-size: cover;">
+				<div class="row">
+		   			<div style="text-align:right" class="col-sm-3">
+		   			</div>
+		   			<div class="col-sm-6">
+		   				<br/><br/><br/><br/><br/><br/>
+		   				<br/><br/><br/><br/><br/><br/>
+		   				<br/><br/><br/><br/><br/><br/>
+						<div class="container-fluid bg-light border mt-0 text-white bg-dark p-0 rounded-top rounded-bottom" style="font-size:25px">
+			    			<h1 style="font-family:Cameliya; color:#fff; text-align:center;font-size:80px"><strong>Immo-Location</strong></h1>
+			    		</div>
+			    		<div style="text-align:center">
+			    			<strong>
+			    				<p class="lead fw-normal" style="color:#fff; font-family:Galgony; font-size:25px">Nous vous proposons la location des biens et de services dont vous pourrez régler les factures aisément sans vous déplacer.</p>
+			    			</strong>
+			    		</div>
+		   			</div>
+		   			<div style="text-align:right" class="col-sm-3">
+		   			</div>
+				</div>
+			</div>
+			<div class="container-fluid bg-light border mt-0 bg-light p-0 rounded-top rounded-bottom" style="font-size:25px">
+				<nav id="navAccueilS.html" class="d-flex justify-content-center py-3">
+				 	<a class="py-2" href="Accueil.html" title="Accueil" style="text-decoration:none">
+						<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#000" class="bi bi-house-door" viewBox="0 0 16 16">
+							<path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z">
+							</path>
+						</svg>
+					</a>
+					<a class="py-2" href="Propriete/Proprietes.html" title="Propriétés" style="text-decoration:none; margin-left:50px" th:href="@{/publication}">
+						<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#000" class="bi bi-building" viewBox="0 0 16 16">
+							<path fill-rule="evenodd" d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694 1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z"></path>
+							<path d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z"></path>
+						</svg>
+				    </a>
+					<a class="py-2" href="Bailleur/AuthentificationBailleur.html" th:href="@{/Bailleur/AuthentificationBailleur}" title="Bailleur" style="text-decoration:none; margin-left:50px">
+						<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#000" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+							<path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"></path>
+						</svg>
+					</a>
+					<a class="py-2" href="Locataire/AuthentificationLocataire.html" th:href="@{/locataire}" title="Locataire" style="text-decoration:none; margin-left:50px">
+						<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#000" class="bi bi-person-fill" viewBox="0 0 16 16">
+							<path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
+						</svg>
+					</a>
+					<a class="py-2" href="Commentaire.html" title="Commentaires" style="text-decoration:none; margin-left:50px">
+						<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#000" class="bi bi-plus" viewBox="0 0 16 16">
+							<path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path>
+						</svg>
+				    </a>
+				</nav>
+			</div>
+		</header>
+		<br/><br/><br/><br/><br/>
+		<main>
+			<div style="font-family:Cambria; text-align:center;font-size:20px">
+				<h3 style="font-size:40px">IMMOLOCATION</h3>
+				<p>Logiciel de gestion locative et de facturation à distance</p>
+			</div>
+			<br/>
+			<div style="font-family:Cambria;font-size:20px;  margin-left:100px; margin-right:100px">
+				<h3><strong><span>Quoi<span style="font-size:40px; color:red">?</span></span></strong></h3>
+				<p style="color:#969897">
+					Grâce à immolocation trouvez vous une propriété, qui, en plus d'être semblable à la maiq=son de vos rêves. Il s'agira d'une demeure où, vous ne vous ferez plus de soucis lors de votre facturation, plus de conflit avec le bailleur, pour une facture soit disant impayé. Et plus de possibilité de jongler le bailleur.
+				</p>
+				<h3><strong><span>Comment<span style="font-size:40px; color:red">?</span><span style="font-size:20px">(mission de immolocation)</span></span></strong></h3>
+				<p style="color:#969897">
+					Vous offrir le confort dont vous avez besoin est notre priorité, à cet effet différents services sont mis sur pied, voici quelques privilège dont vous jouirez en ayant une demeure chez nous.
+				</p>
+				<ul style="color:#969897">
+					<li>Vous serez facturé en ligne.</li>
+					<li>Vous serez informé quelques  jours avant de la date de payement.</li>
+					<li>Vous possedez desormais une archive de tous vos payements.</li>
+					<li>Vous aurez la possibilité de communiquez avec votre bailleur.</li>
+				</ul>
+				<h3><strong><span>Qu'attendez-vous<span style="font-size:40px; color:red">?</span></span></strong></h3>
+				<p style="color:#969897">
+					Vite, rendez-vous dans l'onglet pour consulter les <a href="propriete/proprietes.html">propriétés</a>, faîtes le choix de la propriété / des propriétés qui vous reflète(nt) le mieux, contacter le bailleur, signer un contrat, et ABRACADABRA vos soucis auront tous disparu...
+				</p>
+			</div>
+			<br/><br/><br/><br/><br/>
+		</main>
+		<footer class="container-fluis"  style="background-color:#000; color:#adb4da">
+			<div class="container">
+				<br/>
+			  	<div class="row">
+				    <div class="col-12 col-md">
+					    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-house"  viewBox="0 0 16 16" style="margin-top:10px; margin-left:10px">
+							<path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+							<path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+						</svg>
+				      <small class="d-block mb-3 text-muted">&copy; 2021–2022</small>
+				    </div>
+				    <div class="col-6 col-md">
+				      <h6>Localisation</h6>
+				      <ul class="list-unstyled text-small">
+				        <small class="d-block mb-3 text-muted">Yaoundé</small>
+				        <small class="d-block mb-3 text-muted">Douala</small>
+				      </ul>
+				    </div>
+				    <div class="col-6 col-md">
+				      <h6>Adresse mails</h6>
+				      <ul class="list-unstyled text-small">
+				        <small class="d-block mb-3 text-muted">keumoe@gmail.com</small>
+				        <small class="d-block mb-3 text-muted">ouvaneAuxilia@gmail.com</small>
+				      </ul>
+				    </div>
+				    <div class="col-6 col-md">
+				      <h6>Contact</h6>
+				      <ul class="list-unstyled text-small">
+				        <small class="d-block mb-3 text-muted">656 055 537</small>
+				        <small class="d-block mb-3 text-muted">698 192 918</small>
+				      </ul>
+				    </div>
+			  	</div>
+		  	</div>
+		</footer>
+	</body>
+</html>

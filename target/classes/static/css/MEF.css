@@ -1,0 +1,18 @@
+body
+{
+	font-family: cambria;
+}
+a
+{
+	text-decoration: none;
+	color: red;
+}
+div
+{
+	font-family: cambria;
+}
+#fond
+{
+    background-image: url(../../templates/Locataire/images/fond.jpg);
+    background-size: cover;
+}

@@ -1,0 +1,16 @@
+
+.formconrol{
+    border-radius: 0px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom:1px solid white ;
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-shadow: -1px 1px 60px 10px rgba(0,0,0,0.5);
+}
+.h2 {
+    position: relative;
+    margin-left: 15%;
+}
